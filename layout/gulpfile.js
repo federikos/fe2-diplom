@@ -42,7 +42,6 @@ function styles(){
 			   //.pipe(concat('style.css'))
 			   .pipe(gcmq())
 			   .pipe(autoprefixer({
-		            browsers: ['> 0.1%'],
 		            cascade: false
 		        }))
 			   //.on('error', console.error.bind(console))
