@@ -8,7 +8,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
 const gcmq = require('gulp-group-css-media-queries');
 const less = require('gulp-less');
-const smartgrid = require('smart-grid');
 
 const isDev = (process.argv.indexOf('--dev') !== -1);
 const isProd = !isDev;
@@ -36,12 +35,13 @@ function clear(){
 }
 
 function styles(){
-	return gulp.src('./src/css/+(styles|styles-per|styles-ie9).less')
+	return gulp.src('./src/css/style.less')
 			   .pipe(gulpif(isDev, sourcemaps.init()))
 			   .pipe(less())
 			   //.pipe(concat('style.css'))
 			   .pipe(gcmq())
 			   .pipe(autoprefixer({
+		            browsers: ['> 0.1%'],
 		            cascade: false
 		        }))
 			   //.on('error', console.error.bind(console))
@@ -75,26 +75,11 @@ function watch(){
 
 	gulp.watch('./src/css/**/*.less', styles);
 	gulp.watch('./src/**/*.html', html);
-	gulp.watch('./smartgrid.js', grid);
-}
-
-function grid(done){
-	delete require.cache[require.resolve('./smartgrid.js')];
-
-	let settings = require('./smartgrid.js');
-	smartgrid('./src/css', settings);
-
-	settings.offset = '3.1%';
-	settings.filename = 'smart-grid-per';
-	smartgrid('./src/css', settings);
-
-	done();
 }
 
 let build = gulp.series(clear, 
 	gulp.parallel(styles, img, html)
 );
 
-gulp.task('build', gulp.series(grid, build));
+gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
-gulp.task('grid', grid);
