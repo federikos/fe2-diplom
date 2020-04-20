@@ -6,30 +6,30 @@
     <title>Заказ ЖД билетов</title>
 </head>
 <body>
-    <header class="header header--start-page">
-        <img src="#" alt="logo" class="logo">
+    <header class="main-header main-header--train-background">
+        <a class="logo header__logo"><img src="#" alt="logo" class="logo"></a>
         <nav class="main-navigation">
-            <ul>
-                <li class="main-navigation_item"><a href="#" class="main-navigation_link"></a></li>
-                <li class="main-navigation_item"><a href="#" class="main-navigation_link"></a></li>
-                <li class="main-navigation_item"><a href="#" class="main-navigation_link"></a></li>
-                <li class="main-navigation_item"><a href="#" class="main-navigation_link"></a></li>
+            <ul class="main-navigation__list">
+                <li class="main-navigation__item"><a href="#" class="main-navigation__link">О нас</a></li>
+                <li class="main-navigation__item"><a href="#" class="main-navigation__link">Как это работает</a></li>
+                <li class="main-navigation__item"><a href="#" class="main-navigation__link">Отзывы</a></li>
+                <li class="main-navigation__item"><a href="#" class="main-navigation__link">Контакты</a></li>
             </ul>
         </nav>
-        <h1>Сервис заказа ЖД билетов</h1>
         <form class="widget">
-            <div class="widget_direction">
-                <input type="text" class="widget_from">
-                <input type="text" class="widget_to">
+            <div class="widget__direction">
+                <input type="text" class="widget__from">
+                <input type="text" class="widget__to">
             </div>
-            <div class="widget_date">
-                <input type="text" class="widget_start">
-                <input type="text" class="widget_end">
+            <div class="widget__date">
+                <input type="text" class="widget__start">
+                <input type="text" class="widget__end">
             </div>
-            <input type="submit" value="Найти билеты" class="widget_find-button">
+            <input type="submit" value="Найти билеты" class="widget__find-button">
         </form>
     </header>
     <main class="main">
+        <h1>Сервис заказа ЖД билетов</h1>
         <section class="about">
             <h2 class="h2">О нас</h2>
             <p>Мы рады видеть вас! Мы рботаем для Вас с 2003 года. 14 лет мы наблюдаем, как с каждым днем все больше людей заказывают жд билеты через интернет.</p> 
@@ -42,7 +42,7 @@
                 <li>Удобный заказ на сайте</li>
                 <li>Нет необходимости ехать в офис</li>
                 <li>Огромный выбор направлений</li>
-                <button>Узнать больше</button>
+                <a herf="#" class="button--outlined">Узнать больше</button>
             </ul>
         </section>
         <section class="reviews">
@@ -121,42 +121,42 @@
             </ul>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer_top">
+    <footer class="main-footer">
+        <div class="main-footer__top">
             <div class="contact">
-                <h3 class="contact_call-to-action">Свяжитесь с нами</h3>
+                <h3 class="contact__call-to-action">Свяжитесь с нами</h3>
                 <ul>
-                    <li class="contact_phone">8 (800) 000 00 00</li>
-                    <li class="contact_email">inbox@mail.ru</li>
-                    <li class="contact_skype">ru.train.tickets</li>
-                    <li class="contact_address">
+                    <li class="contact__phone">8 (800) 000 00 00</li>
+                    <li class="contact__email">inbox@mail.ru</li>
+                    <li class="contact__skype">ru.train.tickets</li>
+                    <li class="contact__address">
                         г. Москва<br>
                         ул. Московская 27-35<br>
                         555 555</li>
                 </ul>
             </div>
             <div class="subscription">
-                <h3 class="contact_call-to-action">Подписка</h3>
+                <h3 class="contact__call-to-action">Подписка</h3>
                 <p>Будьте в курсе событий</p>
-                <form class="subscription_form">
-                    <input type="text" placeholder="e-mail" class="subscription_email">
-                    <input type="submit" value="Отправить" class="subscription_submit">
+                <form class="subscription__form">
+                    <input type="text" placeholder="e-mail" class="subscription__email">
+                    <input type="submit" value="Отправить" class="subscription__submit">
                 </form>
             </div>
             <div class="social">
-                <p class="contact_call-to-action">Подписывайтесь на нас</p>
-                <ul>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Google+</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
+                <p class="social__call-to-action">Подписывайтесь на нас</p>
+                <ul clast="social__list">
+                    <li class="social__list-item"><a href="#">Youtube</a></li>
+                    <li class="social__list-item"><a href="#">LinkedIn</a></li>
+                    <li class="social__list-item"><a href="#">Google+</a></li>
+                    <li class="social__list-item"><a href="#">Facebook</a></li>
+                    <li class="social__list-item"><a href="#">Twitter</a></li>
                 </ul>
 
             </div>
         </div>
-        <div class="footer_bottom">
-            <img src="#" alt="logo" class="logo">
+        <div class="main-footer__bottom">
+            <a class="logo footer__logo"><img src="#" alt="logo" class="logo"></a>
             <button class="to-top">Наверх</button>
             <p class="copyright">2018 WEB</p>
         </div>
